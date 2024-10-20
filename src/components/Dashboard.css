@@ -1,0 +1,208 @@
+* {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  button {
+    border: none;
+    border-radius: 4px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    cursor: pointer;
+  }
+  .dashboard-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dashboard-container .form-wrapper {
+    position: fixed;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .dashboard-container .form-wrapper .heading {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 8px 0;
+    color: black;
+    text-align: center;
+  }
+  .dashboard-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .dashboard-container form input,
+  .dashboard-container form textarea,
+  .dashboard-container form select.priority {
+    font-size: 14px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    border: 1px solid gray;
+    color: gray;
+  }
+  .high-priority {
+    background-color: #ff3838;
+    color: white;
+    width: 80px;
+    text-align: center;
+    padding: 4px 0px;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .medium-priority {
+    background-color: #ffa801;
+    color: white;
+    width: 110px;
+    text-align: center;
+    padding: 4px 0px;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .low-priority {
+    background-color: #05c46b;
+    color: white;
+    width: 80px;
+    text-align: center;
+    padding: 4px 0px;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .dashboard-container form input:focus,
+  .dashboard-container form textarea:focus,
+  .dashboard-container form select:focus {
+    outline: none;
+  }
+  .dashboard-container form button {
+    background-color: #0984e3;
+  }
+  .data-part-container {
+    position: absolute;
+    top: 320px;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .search-part{
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid gray;
+      width: 50%;
+     border-radius: 4px;
+  }
+  .search-part .search{
+     border: transparent;
+     width: 100%;
+  }
+  .search-part .search:focus{
+      outline: none;
+  }
+  .data-part-container .tasks-part {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  .tasks-part {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .tasks-part .task {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .button-part {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+  }
+  .completed-btn {
+    background-color: #4b4b4b;
+    color: #ffffff;
+  }
+  .edit-btn {
+    background-color: #192a56;
+    color: #ffffff;
+  }
+  .delete-btn {
+    background-color: #c23616;
+    color: #ffffff;
+  }
+  .no-task {
+    text-align: center;
+    color: red;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  
+  /* media query for responsiveness */
+  @media screen and (min-width: 1200px) {
+    .dashboard-container .form-wrapper {
+      width: 60%;
+    }
+    .data-part-container {
+      width: 58%;
+    }
+  }
+  @media screen and (max-width: 1200px) and (min-width: 767px) {
+    .dashboard-container .form-wrapper {
+      width: 60%;
+    }
+    .data-part-container {
+      width: 58%;
+    }
+  }
+  @media screen and (max-width: 768px) and (min-width: 400px) {
+    .dashboard-container .form-wrapper {
+      width: 80%;
+    }
+    .data-part-container {
+      width: 78%;
+    }
+  }
+  @media screen and (max-width: 399px) {
+    .dashboard-container .form-wrapper {
+      width: 90%;
+    }
+    .data-part-container {
+      width: 88%;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .button-part {
+      flex-direction: column;
+    }
+    .dashboard-container .form-wrapper .heading {
+      font-size: 18px;
+    }
+  }
+  
